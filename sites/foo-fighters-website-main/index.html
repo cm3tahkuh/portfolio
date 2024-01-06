@@ -1,0 +1,134 @@
+<!-- 
+ ___  __   __      ___    __       ___  ___  __   __  
+ |__  /  \ /  \    |__  | / _` |__|  |  |__  |__) /__` 
+ |    \__/ \__/    |    | \__> |  |  |  |___ |  \ .__/ 
+                                                        -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="animations/animate.css">
+    <title>Saint Cecilia EP</title>
+</head>
+
+<body>
+    <div id="root">
+        <div class="wrapper">
+            <header>
+                <div class="header wow fadeInDown" data-wow-duration="2s">
+                    <a href="/" class="header__logo">
+                        <img src="https://www.foofighters.com/wp-content/themes/theme/assets/img/logo.svg"
+                            draggable="false" width="54" height="52">
+                    </a>
+                    <div class="menu_navigation_container">
+                        <ul class="menu-navigation">
+                            <li><a href="/" class="underline__link">MUSIC</a></li>
+                            <li><a href="/" class="underline__link">NEWS</a></li>
+                            <li><a href="/" class="underline__link">MERCH</a></li>
+                            <li><a href="/" class="underline__link">TOUR DATES</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="hamburger-menu wow fadeInDown">
+                    <input id="menu__toggle" type="checkbox" />
+                    <label class="menu__btn" for="menu__toggle">
+                      <span></span>
+                    </label>
+                    <ul class="menu__box">
+                      <li><a class="menu__item" href="#">MUSIC</a></li>
+                      <li><a class="menu__item" href="#">NEWS</a></li>
+                      <li><a class="menu__item" href="#">MERCH</a></li>
+                      <li><a class="menu__item" href="#">TOUR DATES</a></li>
+                    </ul>
+                  </div>
+            </header>
+            <section>
+                <div class="page wow fadeInDownBig" data-wow-duration="1.5s">
+                    <span>FOO FIGHTERS</span>
+                    <img draggable="false" src="src/album-preview.png" width="350" height="350">
+                    <span>SAINT CECILIA EP</span>
+                </div>
+            </section>
+            <section>
+                    <div class="content">
+                        <video autoplay muted loop id="myVideo">
+                            <source src="src/foo-fighters-van-doc-loop-desktop-opt.mp4" type="video/mp4">
+                          </video>
+                        <h1 class="header__example wow fadeIn">ATTENTION!</h1>
+                        <div class="content__text">
+                            <div class="text__column__first wow slideInLeft">
+                                "But I must explain to you how all this mistaken idea of denouncing pleasure and
+                                praising pain was born and I will give you a complete account of the system, and expound
+                                the actual teachings of the great explorer of the truth, the master-builder of human
+                                happiness.
+                            </div>
+                            <div class="text__column__second wow slideInRight">
+                                "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                                voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                                occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                                mollitia animi, id est laborum et dolorum fuga.
+                            </div>
+                            <div class="text__column__third wow slideInLeft">
+                                "On the other hand, we denounce with righteous indignation and dislike men who are so
+                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                that they cannot foresee the pain and trouble that are bound to ensue;
+                            </div>
+                        </div>
+            </section>
+            <section>
+                    <div class="main__buy__container wow fadeInDown">
+                        <span>ALBUMS ON CD</span>
+                        <div class="flex-wrap__container">
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/Foo_Fighters_8LP_Sonic_Highways.jpg">
+                            <span>SONIC HIGHWAYS CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/81bcusKozsL._SX522_.jpg">
+                            <span>WASTING LIGHT CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/81YbEgRXarL._SX522_.jpg">
+                            <span>GREATEST HITS CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/ab67616d0000b2731261a8fa94b247ba71d20542.jpg">
+                            <span>SKIN AND BONES CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/Foo_Fighters_-_The_Colour_And_The_Shape.jpg">
+                            <span>THE COLOUR AND THE SHAPE CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                        <div class="buy__cd__content wow fadeInDown">
+                            <img draggable="false" src="src/R-2830781-1302980172.jpg">
+                            <span>MEDIUM RARE CD</span>
+                            <a href="/">BUY</a>
+                        </div>
+                    </div>
+                    </div>
+            </section>
+        </div>
+        <footer><div class="footer">
+            <hr>
+            <h1>Foo Fighters</h1>
+        </div></footer>
+    </div>
+</body>
+<script src="animations/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
+
+</html>
