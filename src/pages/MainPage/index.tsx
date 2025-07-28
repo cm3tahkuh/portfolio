@@ -1,13 +1,15 @@
-import { TypographyH1 } from "@/shared/ui";
-import { TypographyH2 } from "@/shared/ui";
+
+
 import { About } from "@/widgets/About";
 import { Hero } from "@/widgets/Hero";
+import { Skills } from "@/widgets/Skills";
 
 export const MainPage: React.FC = () => {
   return (
     <>
       <Hero />
       <About/>
+      <Skills/>
     </>
   );
 };

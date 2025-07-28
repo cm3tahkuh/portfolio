@@ -17,5 +17,11 @@ export const TypographyH2: React.FC<PropsWithChildren> = ({ children }) => {
 };
 
 export const TypographyP: React.FC<PropsWithChildren> = ({ children }) => {
-  return <p className="leading-7 [&:not(:first-child)]:mt-6">{children}</p>;
+  return <p className="leading-7 [&:not(:first-child)]:mt-4">{children}</p>;
+};
+
+export const TypographyLead: React.FC<PropsWithChildren> = ({ children }) => {
+  return (
+    <p className="text-muted-foreground text-xl text-justify">{children}</p>
+  );
 };
