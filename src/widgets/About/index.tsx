@@ -1,33 +1,52 @@
-import { Container, TypographyH2, TypographyP } from "@/shared/ui";
-
-// border-secondary-foreground bg-secondary border-2 rounded-2xl
+import { Container, TypographyH2 } from "@/shared/ui";
+import { Card, CardContent } from "@/shared/ui/Card/card";
 
 export const About: React.FC = () => {
   return (
-    <Container className="space-y-2">
+    <Container className="space-y-2 mx-auto">
       <TypographyH2>Обо мне</TypographyH2>
+      <div
+        className="
+        grid 
+        grid-cols-1 
+        grid-rows-auto 
+        gap-4 
+        sm:grid-cols-2
+        sm:grid-rows-3
+        md:grid-cols-3
+        items-stretch
+       
+        
+        md:grid-rows-3
+      "
+      >
+        <Card className="col-span-1 sm:col-span-2 md:col-span-2">
+          <CardContent>
+            Привет! Меня зовут Эдуард, я фронтенд-разработчик с фокусом на
+            создание современных, удобных и визуально привлекательных
+            интерфейсов.
+          </CardContent>
+        </Card>
 
-      <div className="text-justify leading-relaxed text-base md:text-lg">
-        <TypographyP>
-          Привет! Меня зовут Эдуард, я фронтенд-разработчик с фокусом на
-          создание современных, удобных и визуально привлекательных интерфейсов.
-        </TypographyP>
+        <Card className="col-span-1 row-span-1 sm:row-span-2 sm:col-start-2 md:row-span-2 md:col-start-3">
+          <CardContent>
+            Пишу чистый, поддерживаемый код, внимательно подхожу к UX и всегда
+            стремлюсь делать интерфейсы не только красивыми.
+          </CardContent>
+        </Card>
 
-        <TypographyP>
-          Я специализируюсь на работе с React, TypeScript и Tailwind CSS, а
-          также люблю делать интерфейсы живыми с помощью анимаций и библиотек
-          вроде Framer Motion.
-        </TypographyP>
+        <Card className="col-span-1 sm:col-span-2 sm:row-span-1 md:col-span-2 md:row-span-3 md:row-start-2">
+          <CardContent>
+            Мне нравится учиться новому и применять это на практике — будь то
+            свежие фреймворки, подходы или инструменты.
+          </CardContent>
+        </Card>
 
-        <TypographyP>
-          Пишу чистый, поддерживаемый код, внимательно подхожу к UX/UI и всегда
-          стремлюсь сделать интерфейс не только красивым, но и быстрым.
-        </TypographyP>
-
-        <TypographyP>
-          Мне нравится учиться новому и применять это на практике — будь то
-          свежие фреймворки, подходы или инструменты разработки.
-        </TypographyP>
+        <Card className="col-span-1 sm:col-span-1 sm:row-start-2 sm:row-span-2 md:col-start-3 md:row-start-3">
+          <CardContent>
+            Я специализируюсь на работе с React, TypeScript и Tailwind CSS.
+          </CardContent>
+        </Card>
       </div>
     </Container>
   );

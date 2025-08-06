@@ -1,3 +1,5 @@
+export { SkillsCard } from "./SkillsCard";
+
 export { TypographyP } from "./Typography";
 
 export { TypographyH2 } from "./Typography";
