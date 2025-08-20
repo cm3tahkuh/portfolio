@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/shared/ui/Card/card";
 
 export const About: React.FC = () => {
   return (
-    <Container className="space-y-2 mx-auto">
+    <Container className="mx-auto">
       <TypographyH2>Обо мне</TypographyH2>
       <div
         className="

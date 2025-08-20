@@ -15,11 +15,11 @@ interface SkillsCardProps {
 
 export const SkillsCard: React.FC<SkillsCardProps> = ({ children, image }) => {
   return (
-    <Card className="border-2 text-center bg-card-foreground dark:bg-card">
-      <CardContent>
-        <img src={image} alt={image} className="mx-auto" />
+    <Card className="border-2 bg-card-foreground dark:bg-card flex flex-col items-center justify-center text-center p-4">
+      <CardContent className="flex flex-col items-center justify-center flex-1">
+        <img src={image} alt={image} className="w-[200px] h-auto mb-4" />
+        <CardTitle className="text-secondary">{children}</CardTitle>
       </CardContent>
-      <CardTitle className="text-secondary">{children}</CardTitle>
     </Card>
-  )
+  );
 };
