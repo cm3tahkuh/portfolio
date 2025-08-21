@@ -1,41 +1,68 @@
 import { ModeToggle } from "@/entities";
-
 import { Container } from "@/shared/ui";
 import { cn } from "@/shared/lib/utils";
-import { useState } from "react";
-import { Button } from "@/shared/ui/Button/button";
 import { Dock } from "@/shared/ui";
+import {
+  AwardIcon,
+  CircleUserRoundIcon,
+  FolderOpenDotIcon,
+  HammerIcon,
+  MailIcon,
+} from "lucide-react";
+
+const scrollToSection = ({
+  id,
+  offset = 80,
+}: {
+  id: string;
+  offset?: number;
+}): void => {
+  const element = document.getElementById(id);
+  if (element) {
+    const top =
+      element.getBoundingClientRect().top + window.pageYOffset - offset;
+    window.scrollTo({ top, behavior: "smooth" });
+  }
+};
 
 const NAV = [
   { href: "#about", label: "Обо мне" },
   { href: "#skills", label: "Навыки" },
-  { href: "#projects", label: "Проекты" },
   { href: "#certificates", label: "Сертификаты" },
+  { href: "#projects", label: "Проекты" },
   { href: "#contacts", label: "Контакты" },
 ];
 
 const items = [
-  { icon: "asd", label: "Home", onClick: () => alert("Home!") },
   {
-    icon: "asd",
-    label: "Archive",
-    onClick: () => alert("Archive!"),
+    icon: <CircleUserRoundIcon />,
+    label: "Обо мне",
+    onClick: () => scrollToSection({ id: "about" }),
   },
   {
-    icon: "asd",
-    label: "Profile",
-    onClick: () => alert("Profile!"),
+    icon: <HammerIcon />,
+    label: "Навыки",
+    onClick: () => scrollToSection({ id: "skills" }),
   },
   {
-    icon: "asd",
-    label: "Settings",
-    onClick: () => alert("Settings!"),
+    icon: <AwardIcon />,
+    label: "Сертификаты",
+    onClick: () => scrollToSection({ id: "certificates" }),
+  },
+  {
+    icon: <FolderOpenDotIcon />,
+    label: "Проекты",
+    onClick: () => scrollToSection({ id: "projects" }),
+  },
+
+  {
+    icon: <MailIcon />,
+    label: "Контакты",
+    onClick: () => scrollToSection({ id: "contacts" }),
   },
 ];
 
 export const Header: React.FC = () => {
-  const [open, setOpen] = useState(false);
-
   return (
     <>
       <header className="sticky top-4 z-50 md:block hidden">

@@ -14,9 +14,9 @@ import TailwindLogo from "@/shared/assets/icons/tailwind.png";
 
 export const Skills: React.FC = () => {
   return (
-    <Container>
+    <Container id="skills" className="scroll-mt-[100px]">
       <TypographyH2>Мои навыки</TypographyH2>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <section className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         <SkillsCard image={ReactLogo}>React</SkillsCard>
         <SkillsCard image={NextjsLogo}>Next.js</SkillsCard>
         <SkillsCard image={HtmlLogo}>HTML5</SkillsCard>

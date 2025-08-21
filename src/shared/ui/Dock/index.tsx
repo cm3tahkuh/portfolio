@@ -152,11 +152,11 @@ export function Dock({
   items,
   className = "",
   spring = { mass: 0.1, stiffness: 150, damping: 12 },
-  magnification = 70,
+  magnification = 60,
   distance = 200,
-  panelHeight = 64,
+  panelHeight = 60,
   dockHeight = 256,
-  baseItemSize = 50,
+  baseItemSize = 40,
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
@@ -183,8 +183,8 @@ export function Dock({
           mouseX.set(Infinity);
         }}
         className={`${className} mx-auto max-w-6xl transition-all duration-300
-            bg-white/50 dark:bg-neutral-900/40 backdrop-blur-xl
-            border border-black/5 dark:border-white/10 absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl pb-2 px-4`}
+            bg-white/50 dark:bg-neutral-900/40 
+            border border-black/5 dark:border-white/10 absolute bottom-2 transform -translate-x-[52.5%] flex items-end w-fit gap-4 rounded-2xl pb-2 px-4`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"

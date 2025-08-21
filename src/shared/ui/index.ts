@@ -13,3 +13,5 @@ export { TypographyLead } from "./Typography";
 export { Container } from "./Container";
 
 export { Dock } from "./Dock";
+
+export { SplitText } from "./SplitText";

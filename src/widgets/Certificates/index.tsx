@@ -16,7 +16,7 @@ import yandexCertificate from "@/shared/assets/certificates/yandex.png";
 
 export const Certificates: React.FC = () => {
   return (
-    <Container>
+    <Container id="certificates" className="scroll-mt-[100px]">
       <TypographyH2>Сертификаты</TypographyH2>
       <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <PhotoProvider>
