@@ -1,12 +1,17 @@
 import { Container, TypographyH2 } from "@/shared/ui";
 import { Card, CardContent } from "@/shared/ui/Card/card";
+import { motion, useScroll, useTransform } from "motion/react";
 
 export const About: React.FC = () => {
+  const { scrollYProgress } = useScroll();
+
+  const scaleValue = useTransform(scrollYProgress, [0, 0.1, 0.2], [0.7, 0.9, 1]);
   return (
-    <Container id="about" className="mx-auto scroll-mt-[100px]">
-      <TypographyH2>Обо мне</TypographyH2>
-      <div
-        className="
+    <motion.div style={{ scale: scaleValue }}>
+      <Container id="about" className="mx-auto scroll-mt-[100px]">
+        <TypographyH2>Обо мне</TypographyH2>
+        <div
+          className="
         grid 
         grid-cols-1 
         grid-rows-auto 
@@ -17,35 +22,36 @@ export const About: React.FC = () => {
         items-stretch
         md:grid-rows-3
       "
-      >
-        <Card className="col-span-1 sm:col-span-2 md:col-span-2 border-2">
-          <CardContent className="font-bold text-xl">
-            Привет! Меня зовут Эдуард, я фронтенд-разработчик с фокусом на
-            создание современных, удобных и визуально привлекательных
-            интерфейсов.
-          </CardContent>
-        </Card>
+        >
+          <Card className="col-span-1 sm:col-span-2 md:col-span-2 border-2">
+            <CardContent className="font-bold text-xl">
+              Привет! Меня зовут Эдуард, я фронтенд-разработчик с фокусом на
+              создание современных, удобных и визуально привлекательных
+              интерфейсов.
+            </CardContent>
+          </Card>
 
-        <Card className="col-span-1 row-span-1 sm:row-span-2 sm:col-start-2 md:row-span-2 md:col-start-3 border-2">
-          <CardContent className="font-bold text-xl">
-            Пишу чистый, поддерживаемый код, внимательно подхожу к UX и всегда
-            стремлюсь делать интерфейсы не только красивыми.
-          </CardContent>
-        </Card>
+          <Card className="col-span-1 row-span-1 sm:row-span-2 sm:col-start-2 md:row-span-2 md:col-start-3 border-2">
+            <CardContent className="font-bold text-xl">
+              Пишу чистый, поддерживаемый код, внимательно подхожу к UX и всегда
+              стремлюсь делать интерфейсы не только красивыми.
+            </CardContent>
+          </Card>
 
-        <Card className="col-span-1 sm:col-span-2 sm:row-span-1 md:col-span-2 md:row-span-3 md:row-start-2 border-2">
-          <CardContent className="font-bold text-xl">
-            Мне нравится учиться новому и применять это на практике — будь то
-            свежие фреймворки, подходы или инструменты.
-          </CardContent>
-        </Card>
+          <Card className="col-span-1 sm:col-span-2 sm:row-span-1 md:col-span-2 md:row-span-3 md:row-start-2 border-2">
+            <CardContent className="font-bold text-xl">
+              Мне нравится учиться новому и применять это на практике — будь то
+              свежие фреймворки, подходы или инструменты.
+            </CardContent>
+          </Card>
 
-        <Card className="col-span-1 sm:col-span-1 sm:row-start-2 sm:row-span-2 md:col-start-3 md:row-start-3 border-2">
-          <CardContent className="font-bold text-xl">
-            Я специализируюсь на работе с React, TypeScript и Tailwind CSS.
-          </CardContent>
-        </Card>
-      </div>
-    </Container>
+          <Card className="col-span-1 sm:col-span-1 sm:row-start-2 sm:row-span-2 md:col-start-3 md:row-start-3 border-2">
+            <CardContent className="font-bold text-xl">
+              Я специализируюсь на работе с React, TypeScript и Tailwind CSS.
+            </CardContent>
+          </Card>
+        </div>
+      </Container>
+    </motion.div>
   );
 };

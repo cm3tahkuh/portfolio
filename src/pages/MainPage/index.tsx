@@ -1,5 +1,6 @@
 import { About } from "@/widgets/About";
 import { Certificates } from "@/widgets/Certificates";
+import { Contacts } from "@/widgets/Contacts";
 import { Hero } from "@/widgets/Hero";
 import { Projects } from "@/widgets/Projects";
 import { Skills } from "@/widgets/Skills";
@@ -12,6 +13,7 @@ export const MainPage: React.FC = () => {
       <Skills />
       <Certificates />
       <Projects />
+      <Contacts/>
     </div>
   );
 };
