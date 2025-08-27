@@ -100,7 +100,7 @@ export const Header: React.FC = () => {
           </Container>
         </div>
       </header>
-      <div className="md:hidden block fixed mx-auto left-1/2 bottom-4">
+      <div className="md:hidden block z-999999 fixed mx-auto left-1/2 bottom-4">
         <Dock items={items} />
       </div>
     </>

@@ -1,11 +1,19 @@
 import { Container, TypographyH2 } from "@/shared/ui";
 import { Github, Mail } from "lucide-react";
+import { motion } from "motion/react";
 
 export const Contacts: React.FC = () => {
   return (
-    <section id="contacts" className="pb-24">
+    <motion.section
+      initial={{ opacity: 0, y: 0 }}
+      whileInView={{ opacity: 1, y: 50 }}
+      transition={{ duration: 0.7, ease: "easeInOut" }}
+      id="contacts"
+      className="pb-24"
+    >
       <Container className="max-w-3xl mx-auto text-center space-y-8">
         <TypographyH2>Контакты</TypographyH2>
+
         <p className=" text-lg">
           Вы можете связаться со мной через Email или соцсети ниже
         </p>
@@ -26,6 +34,6 @@ export const Contacts: React.FC = () => {
           </a>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };

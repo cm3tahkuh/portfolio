@@ -14,5 +14,4 @@ export { Container } from "./Container";
 
 export { Dock } from "./Dock";
 
-export { SplitText } from "./SplitText";
-
+export { DecryptedText } from "./DecryptedText";
