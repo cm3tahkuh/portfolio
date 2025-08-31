@@ -9,6 +9,5 @@ entries:
   - name: Игры Будущего
     image: https://i.ibb.co/8Dk1yW60/image.png
     description: Платформа для проведения фиджитал-соревнований в учебных заведениях.
-    github: https://github.com/username/todo-app
-    demo: https://todo-app-demo.vercel.app
+    github: https://github.com/cm3tahkuh/gameoffuture
 ---
