@@ -1,22 +1,18 @@
-import {
-  Container,
-  DecryptedText,
-  TypographyH2,
-  TypographyH3,
-  TypographyP,
-} from "@/shared/ui";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/shared/ui/Card/card";
-import { ChevronRight } from "lucide-react";
-import { PhotoProvider, PhotoView } from "react-photo-view";
-import yandexCertificate from "@/shared/assets/certificates/yandex.png";
+import { Container, DecryptedText, TypographyH2 } from "@/shared/ui";
+
 import { motion } from "motion/react";
+import type { Certificate } from "@/entities/certificate/model/certificate";
+import { useEffect, useState } from "react";
+import { loadMdEntries } from "@/shared/lib/dataLoader";
+import { CertificateCard } from "@/entities/certificate/ui";
 
 export const Certificates: React.FC = () => {
+  const [certificates, setCertificates] = useState<Certificate[]>([]);
+
+  useEffect(() => {
+    loadMdEntries("/data/certificates.md").then(setCertificates);
+  }, []);
+
   return (
     <Container id="certificates" className="scroll-mt-[100px]">
       <DecryptedText
@@ -33,31 +29,9 @@ export const Certificates: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeInOut" }}
         >
-          <PhotoProvider>
-            <PhotoView src={yandexCertificate}>
-              <Card className="group cursor-pointer rounded-xl border-2 shadow-sm hover:shadow-md transition">
-                <CardHeader>
-                  <CardTitle className="font-semibold text-lg">
-                    <TypographyH3>
-                      Javascript от Яндекса: с нуля до веб-разработчика
-                    </TypographyH3>
-                    <TypographyP>Яндекс · Октябрь 2023 - Май 2024</TypographyP>
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex items-center justify-between text-lg font-medium">
-                  <span
-                    className="relative 
-    after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 
-    after:bg-current after:transition-all after:duration-300
-    group-hover:after:w-full"
-                  >
-                    Посмотреть сертификат
-                  </span>
-                  <ChevronRight className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-1 text-muted-foreground" />
-                </CardContent>
-              </Card>
-            </PhotoView>
-          </PhotoProvider>
+          {certificates.map((c) => (
+            <CertificateCard key={c.name} {...c} />
+          ))}
         </motion.div>
       </section>
     </Container>

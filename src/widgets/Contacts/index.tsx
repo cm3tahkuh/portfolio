@@ -9,7 +9,7 @@ export const Contacts: React.FC = () => {
       whileInView={{ opacity: 1, y: 50 }}
       transition={{ duration: 0.7, ease: "easeInOut" }}
       id="contacts"
-      className="pb-24"
+      className="mb-36"
     >
       <Container className="max-w-3xl mx-auto text-center space-y-8">
         <TypographyH2>Контакты</TypographyH2>
