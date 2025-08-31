@@ -10,7 +10,7 @@ export const Certificates: React.FC = () => {
   const [certificates, setCertificates] = useState<Certificate[]>([]);
 
   useEffect(() => {
-    loadMdEntries("/data/certificates.md").then(setCertificates);
+    loadMdEntries("https://raw.githubusercontent.com/cm3tahkuh/portfolio/refs/heads/gh-pages/data/certificates.md").then(setCertificates);
   }, []);
 
   return (

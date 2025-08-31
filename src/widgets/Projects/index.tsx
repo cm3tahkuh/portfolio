@@ -8,7 +8,7 @@ export const Projects: React.FC = () => {
   const [projects, setProjects] = useState<[any] | []>([]);
 
   useEffect(() => {
-    loadMdEntries("/data/projects.md").then(setProjects);
+    loadMdEntries("https://raw.githubusercontent.com/cm3tahkuh/portfolio/refs/heads/gh-pages/data/projects.md").then(setProjects);
   }, []);
 
   return (
